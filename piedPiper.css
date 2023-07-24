@@ -2,10 +2,17 @@ body {
     background: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal; 
+}
+.title_text {
+    font-weight: 500;
 }
 .container{
-    /*width: 1219px;*/
-    /*padding: 0 55px;*/
+    width: 1219px;
+    padding: 0 55px;
+    /*padding: 0 4.5%*/
     /* Выравниваем по центру: */
     margin: auto;
     color: #FFFFFF;
@@ -19,35 +26,40 @@ body {
     display: flex;
     /* Выравниваем в шапке по центру по вертикали: */
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 55px;
 }
 .logo {
-    margin: 0 25%;
+    /* margin: 0 25%; */
 }
 .nav {
-   margin-right: 20%; 
+    color: #FFFFFF;
 }
 
 .tabs {
-    height: 29px;
-    width: 416px;
     display: flex;
     /* Выравниваем в шапке по центру по вертикали: */
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
-    font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
     padding-left: 0;
 }
+
 .tabs-item {
     text-decoration: none;
     color: #FFFFFF;
 }
+.nav_pipeline {
+    padding: 0 8px;
+}
+
 .jumbotron {
     height: 403px;
     background-image: url('./img/jumbotron.png');
+    background-origin: border-box;
+
 }
 .jumbotron, .hero {
     overflow: hidden;
@@ -58,7 +70,9 @@ body {
     /* Выравниваем в шапке по центру по вертикали: */
     align-items: center;
     justify-content: center;
+
 }
+
 h4 {
     font-weight: 500;
     font-size: 72px;
@@ -156,7 +170,7 @@ h3 {
     text-align: center;
 }
 
-@media (max-width: 1219px) {
+@media screen and (max-width: 1219px) {
     
     .logo {
         margin: 0 20%;
@@ -174,3 +188,39 @@ h3 {
     }
 
 }
+
+/* 
+.c6 { width: 100%; }
+
+.c2 { width: 33.3333%; }
+
+.c1 { width: 16.6666%; }
+
+/*  Для средних экранов (планшеты, ширина ≥992px) */
+/*  
+@media (min-width: 992px) and (max-width: 1199px) {
+    .c2 { width: 50%; } 
+    .c1 { width: 33.3333%; }
+  }
+  
+  /*  Для узких экранов (мобильные, ширина ﻿<992px) */
+  /*  
+  @media (max-width: 991px) {
+    .c1, .c2, .c3 { width: 100%; }
+  } 
+
+
+  
+
+чтоб подключить flexboxgrid2:
+
+https://github.com/evgenyrodionov/flexboxgrid2/tree/master/src
+
+переходите по ссылке и скачайте файл flexboxgrid2.css
+
+добавьте файл к своему проект и подключите файл через link rel
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css">
+*/
